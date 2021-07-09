@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.spockspringboot.infrastructure.adapter.repository.dao.CityDao">
+    <insert id="save" parameterType="com.example.spockspringboot.infrastructure.adapter.repository.dataobject.CityDO"
+            useGeneratedKeys="true" keyProperty="id" >
+        insert into city(name, state, country) values (#{name}, #{state}, #{country})
+    </insert>
+    <select id="selectCityById" resultType="com.example.spockspringboot.infrastructure.adapter.repository.dataobject.CityDO">
+        select id, name, state, country from city where id = #{id}
+    </select>
+</mapper>

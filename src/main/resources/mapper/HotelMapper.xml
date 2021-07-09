@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.spockspringboot.infrastructure.adapter.repository.dao.HotelDao">
+    <insert id="save" parameterType="com.example.spockspringboot.infrastructure.adapter.repository.dataobject.HotelDO"
+            useGeneratedKeys="true" keyProperty="id">
+        insert into hotel(city, name, address, zip) values(#{city}, #{name}, #{ address}, #{ zip})
+    </insert>
+    <select id="selectByCityId" resultType="com.example.spockspringboot.infrastructure.adapter.repository.dataobject.HotelDO">
+        select city, name, address, zip from hotel where city = #{cityId}
+    </select>
+    <select id="selectById" resultType="com.example.spockspringboot.infrastructure.adapter.repository.dataobject.HotelDO">
+        select city, name, address, zip from hotel where id = #{id}
+    </select>
+</mapper>
