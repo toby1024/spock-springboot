@@ -11,7 +11,7 @@ create table city
 create table hotel
 (
     id      int primary key auto_increment,
-    city    int,
+    city_id int,
     name    varchar(50),
     address varchar(50),
     zip     varchar(50)

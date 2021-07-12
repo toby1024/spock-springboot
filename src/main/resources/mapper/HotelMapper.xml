@@ -5,12 +5,12 @@
 <mapper namespace="com.example.spockspringboot.infrastructure.adapter.repository.dao.HotelDao">
     <insert id="save" parameterType="com.example.spockspringboot.infrastructure.adapter.repository.dataobject.HotelDO"
             useGeneratedKeys="true" keyProperty="id">
-        insert into hotel(city, name, address, zip) values(#{city}, #{name}, #{ address}, #{ zip})
+        insert into hotel(city_id, name, address, zip) values(#{cityId}, #{name}, #{ address}, #{ zip})
     </insert>
     <select id="selectByCityId" resultType="com.example.spockspringboot.infrastructure.adapter.repository.dataobject.HotelDO">
-        select city, name, address, zip from hotel where city = #{cityId}
+        select city_id, name, address, zip from hotel where city_id = #{cityId}
     </select>
     <select id="selectById" resultType="com.example.spockspringboot.infrastructure.adapter.repository.dataobject.HotelDO">
-        select city, name, address, zip from hotel where id = #{id}
+        select city_id, name, address, zip from hotel where id = #{id}
     </select>
 </mapper>

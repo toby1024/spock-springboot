@@ -1,8 +1,8 @@
 package com.example.spockspringboot.infrastructure.adapter.repository.dao
 
 import com.example.base.BaseBootTest
-import com.example.spockspringboot.repository.dataobject.CityDO
-import com.example.spockspringboot.repository.dataobject.HotelDO
+import com.example.spockspringboot.infrastructure.adapter.repository.dataobject.CityDO
+import com.example.spockspringboot.infrastructure.adapter.repository.dataobject.HotelDO
 import org.springframework.beans.factory.annotation.Autowired
 import spock.lang.Shared
 
@@ -25,7 +25,7 @@ class HotelDaoTest extends BaseBootTest {
 
     def "should_save_success_and_query_right_data"() {
         given:
-        HotelDO hotelDO = new HotelDO(city: cityId, name: "test_hotel", address: "test_address", zip: "test_zip")
+        HotelDO hotelDO = new HotelDO(cityId: cityId, name: "test_hotel", address: "test_address", zip: "test_zip")
 
         when:
         def id = hotelDao.save(hotelDO)

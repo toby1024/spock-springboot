@@ -1,7 +1,7 @@
 package com.example.spockspringboot.infrastructure.adapter.repository.dao
 
 import com.example.base.BaseBootTest
-import com.example.spockspringboot.repository.dataobject.CityDO
+import com.example.spockspringboot.infrastructure.adapter.repository.dataobject.CityDO
 import org.springframework.beans.factory.annotation.Autowired
 
 class CityDaoTest extends BaseBootTest {

@@ -7,8 +7,8 @@ import java.io.Serializable;
 @Data
 public class CreateHotelCmd implements Serializable {
 
-    private String cityName;
-    private String stateName;
-    private String countryName;
-
+    private Long cityId;
+    private String hotelName;
+    private String address;
+    private String zip;
 }
